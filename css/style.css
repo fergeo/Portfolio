@@ -7,6 +7,7 @@
 }
 
 body {
+    background-image: url("../assets/dark-paper-layers-background-with-golden.jpg");
     background-color: var(--color-de-fondo);
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -49,7 +50,43 @@ a {
 .navegacion__elemento a {
     font-size: 0.9rem;
 }
+
 /* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    color: white;
+}
+
+.presentacion__titulo{
+    width: 70%;
+    font-size: 50px;
+}
+
+.presentacion__subtitulo{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.redes__img{
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.imagenes{
+    width: 20px;
+    height: 20px;
+}
+
 
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
