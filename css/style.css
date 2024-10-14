@@ -10,6 +10,7 @@ body {
     background-image: url("../assets/dark-paper-layers-background-with-golden.jpg");
     background-color: var(--color-de-fondo);
     font-family: 'Raleway', sans-serif;
+    color: white;
     margin: 0;
     box-sizing: border-box;
     padding: 0;
@@ -90,19 +91,109 @@ a {
 
 
 /* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi{
+    margin-left: 50px;
+    margin-right: 10px;
+}
 
+.sobre-mi__titulo{
+    font-size: 25px;
+    font-weight: 3px;
+}
 
 /*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades{
+    text-align: center;
+    margin-bottom: 50px;
+}
 
+.habilidades__titulo{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.habilidades__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.aficiones__titulo{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.aficiones__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*------------------------------ Formación académica --------------------------------*/
+.formacion{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.formacion__titulo{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.formacion__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 
 /*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos{
+    text-align: center;
+    margin-bottom: 50px;
+}
 
+.proyectos__titulo{
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.contenedor_proyectos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
 /*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
 
+.contacto__titulo{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+    padding-left: 400px;
+    width: 200px;
+}
+
+.contacto__campo{
+    margin-bottom: 20px;
+    color: black;
+}
 
 /* ------------------------------ Responsividad ---------------------------------------*/
 
