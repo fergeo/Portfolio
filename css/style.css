@@ -29,52 +29,85 @@ a {
 /* ------------------------------ Sección Menú -------------------------------*/
 .cabecera {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--color-de-fondo-menu);
+    flex-direction: row;
+    color: white;
+    padding: 20px;
 }
 
-.cabecera__logo {
-    max-width: 80px; /* Ajuste para pantallas pequeñas */
+.cabecera__logo__titulo{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.cabecera__logo{
+    width: 20px;
 }
 
 .cabecera__titulo {
     font-size: 1.2rem;
-    text-align: center;
 }
 
-.navegacion__lista {
-    display: none;
+.navegacion{
+    width: 50%;
+}
+
+.navegacion__lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.navegacion__lista li{
+    padding-right: 10px;
 }
 
 .navegacion__elemento a {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* ------------------------------ Sección Presentación ------------------------------*/
 .presentacion{
     display: flex;
     flex-direction: row;
-    margin: 50px;
+    margin: 20px;
     color: white;
 }
 
+.presentacion__contenedor{
+    width: 50%;
+}
+
+img{
+    object-fit: cover;
+}
+
 .presentacion__titulo{
-    width: 70%;
-    font-size: 50px;
+    font-size: 3rem;
 }
 
 .presentacion__subtitulo{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 2rem;
+    
+}
+
+.presentacion__imagen{
+    width: 50%;
+    text-align: center;
+}
+
+.presentacion__imagen img{
+    width: 100%;
+    height: 100%;
+
+    padding-left: 20px;
 }
 
 .redes{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    font-size: 20px;
 }
 
 .redes__img{
@@ -108,15 +141,24 @@ a {
 }
 
 .habilidades__titulo{
-    font-size: 25px;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.habilidades__listas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .habilidades__lista{
     display: flex;
     flex-direction: row;
+    width: 100%;
     justify-content: space-around;
 }
+
+
 
 /*------------------------------ Sección de Aficiones --------------------------------*/
 .aficiones{
@@ -126,12 +168,19 @@ a {
 
 .aficiones__titulo{
     font-size: 25px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.aficiones__listas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .aficiones__lista{
     display: flex;
     flex-direction: row;
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -159,6 +208,10 @@ a {
     margin-bottom: 50px;
 }
 
+.contacto__imagen{
+    width: 50%;
+}
+
 .proyectos__titulo{
     font-size: 25px;
     margin-bottom: 40px;
@@ -174,11 +227,20 @@ a {
 .contacto{
     padding-bottom: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+.contacto__imagen{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contacto__imagen img{
+    width: 300px;
+    height: 200px;
 }
 
 .contacto__titulo{
-    text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
 }
@@ -186,7 +248,6 @@ a {
 .contacto__formulario{
     display: flex;
     flex-direction: column;
-    padding-left: 400px;
     width: 200px;
 }
 
@@ -195,44 +256,154 @@ a {
     color: black;
 }
 
+.contacto__boton{
+    background-color: blue;
+}
+
 /* ------------------------------ Responsividad ---------------------------------------*/
 
-/* Tablets y pantallas más grandes */
-@media (min-width: 768px) {
+/* Tablets */
+@media (max-width: 768px) {
     .cabecera {
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding: 5px;
     }
 
-    .cabecera__logo {
-        max-width: 100px;
-    }
-
-    .cabecera__titulo {
-        font-size: 1.5rem;
+    .cabecera__logo__titulo{
+        padding: 1rem;
+        width: 50%;
     }
 
     .navegacion__lista {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
+        gap: 0.8rem;
     }
 
     .navegacion__elemento a {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
+
+    .presentacion__titulo{
+        font-size: 2rem;
+    }
+    
+    .presentacion__subtitulo{
+        margin-top: 20px;
+        font-size: 1rem;
+        
+    }
+
+    .presentacion__imagen img{
+        width: 70%;
+    }
+
+    .contacto__imagen{
+        display: none;
+    }
+
+    .contacto__datos{
+        pardding-left: 50px;
+    }
+    
 }
 
-/* Pantallas grandes */
-@media (min-width: 1024px) {
-    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+/* Mobile */
+@media (max-width: 600px) {
+
+    .cabecera{
+        flex-direction: column;
+    }
+
     .cabecera__titulo {
-        font-size: 1.8rem;
+        font-size: 0.8rem;
+    }
+
+    .navegacion__elemento {
+        justify-content: start;
     }
 
     .navegacion__elemento a {
-        font-size: 1.1rem;
+        font-size: 0.6rem;
     }
+
+    .presentacion{
+        flex-direction: column-reverse;
+    }
+
+    .presentacion__titulo{
+        font-size: 1rem;
+        padding-top: 20px;
+    }
+    
+    .presentacion__subtitulo{
+        margin-top: 20px;
+        font-size: 0.8rem;
+        
+    }
+
+    .sobre-mi__titulo{
+        font-size: 1rem;
+    }
+
+    .sobre-mi__texto{
+        padding-top: 10px;
+    }
+
+    .habilidades{
+        margin-top: 40px;
+    }
+
+    .habilidades__titulo{
+        font-size: 1.5rem;
+    }
+
+    .habilidades__listas{
+        flex-direction: column;
+    }
+
+    .habilidades__lista{
+        flex-direction: row;
+        padding-top: 10px;
+    }
+
+    .aficiones__titulo{
+        padding-bottom: 20px;
+    }
+
+    .aficiones__listas{
+        flex-direction: column;
+    }
+    
+    .aficiones__lista{
+        flex-direction: row;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .formacion__lista{
+        flex-direction: column;
+    }
+
+    .contenedor_proyectos{
+        flex-direction: column;
+    }
+
+    .formacion__elemento{
+        width: 80%;
+    }
+
+    .contacto{
+        padding-bottom: 10px;
+    }
+
+    .contacto__datos{
+        padding-left: 10px;
+    }
+
+    .contacto__formulario{
+        width: 140px;
+    }
+
 }
